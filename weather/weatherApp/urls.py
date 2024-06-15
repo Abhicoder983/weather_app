@@ -3,7 +3,5 @@ from django.urls import path, include
 import weatherApp.views 
 
 urlpatterns = [
-    
-    path("api/" , weatherApp.views.index),
-    
+    path('api/mydata/', weatherApp.views.MyDataView.as_view(), name='mydata'),
 ]
