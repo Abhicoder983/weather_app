@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import './App.css'
+import './MediaApp.css'
 import myImage1 from './Images/sunny.jpg'
 import myImage2 from './Images/rainy.jpg'
 import myImage3 from './Images/snowfall.jpg'
@@ -82,10 +83,12 @@ const MyComponent = () => {
                 value={postData}
                 placeholder='search your city or town'
                 onChange={(e) => setPostData(e.target.value)}
-            ></input> </h1>
+            ></input>
+            <button onClick={handlePost} className='weatherButton'>check</button>
+             </h1>
            
             
-            <button onClick={handlePost} className='weatherButton'>check</button>
+            
             <center>
             <img src={image} ref= {imageRef} alt="" className='weatherImage' />
             
