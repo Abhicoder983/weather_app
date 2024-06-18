@@ -43,7 +43,8 @@
     box-shadow: 0 0 5px 4px rgb(96, 196, 216) ;
 }
 .heading{
-    display: inline;
+    display: block;
+    margin-bottom: 4vh;
 }
 
 .weatherImage {
@@ -54,7 +55,7 @@
     box-shadow: 0 0 5px 4px rgb(231, 71, 71);
     margin: 3% 0;
     overflow: hidden; /* Ensure content inside image follows the border radius */
-    animation: image .5s linear forwards; /* Use keyframes for height transition */
+    animation: image .5s linear forwards ; /* Use keyframes for height transition */
 }
 
 @keyframes image {
@@ -97,5 +98,6 @@
 }
 .weatherInput{
     height: 4vh;
+    margin-right: 3vw;
 }
 

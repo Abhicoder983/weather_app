@@ -20,6 +20,10 @@ const MyComponent = () => {
 
     const handlePost = () => {
         // Make a POST request
+
+        setImage(null)
+        imageRef.current.style='display:none'
+        setResponse(null)
         axios.post('https://weather-app-zuqu.onrender.com/api/mydata/', { data: postData })
             .then(res => {
                 setResponse(res.data);
@@ -77,7 +81,8 @@ const MyComponent = () => {
            <h1 className='weatherTitle'>Weather Application</h1>
             
             <div className="weatherBody">
-            <h1 className='heading'>Your Location = <input
+            <h1 className='heading'>Your Location:-</h1>
+            <input
                 type='text'
                 className='weatherInput'
                 value={postData}
@@ -85,7 +90,7 @@ const MyComponent = () => {
                 onChange={(e) => setPostData(e.target.value)}
             ></input>
             <button onClick={handlePost} className='weatherButton'>check</button>
-             </h1>
+             
            
             
             
