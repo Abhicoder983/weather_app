@@ -1,0 +1,101 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.body{
+    
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s linear;
+}
+
+.weatherTitle{
+    text-shadow: 0 0 10px #1ef296, 0 0 20px #35d1f4, 0 0 20px #5dd0f0, 0 0 20px #00ff99, 0 0 40px #5dcde1, 0 0 40px #44dcd6, 0 0 40px #2fc1ed, 0 0 40px #43b4e8;
+    position:absolute;
+    top: 0;
+    width: 100%;
+    height: 10vh;
+    padding: 2vh 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(9, 255, 239);
+    font-size: 4rem;
+   
+
+}
+
+.weatherBody{
+    
+    height: fit-content;
+    width: fit-content;
+    background-color: rgba(18, 18, 18, 0.601);
+    color: rgb(152, 234, 141);
+    padding: 5vh 5vw;
+    border: 4px solid rgb(117, 121, 119);
+    border-radius: 4rem;
+    box-shadow: 0 0 5px 4px rgb(96, 196, 216) ;
+}
+.heading{
+    display: inline;
+}
+
+.weatherImage {
+    width: 28rem;
+    height: 0;
+    display: none;
+    border-radius: 4rem;
+    box-shadow: 0 0 5px 4px rgb(231, 71, 71);
+    margin: 3% 0;
+    overflow: hidden; /* Ensure content inside image follows the border radius */
+    animation: image .5s linear forwards; /* Use keyframes for height transition */
+}
+
+@keyframes image {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 12rem; /* Assuming height to be same as width for a square image */
+    }
+}
+
+.degree{
+    color: red;
+    font-size: 2rem;
+    display: block;
+}
+.weatherInformation{
+    display: flex;
+    color: aqua;
+    justify-content: space-between;
+}
+.weatherHeading{
+    margin: 4vh 0;
+
+    color: rgb(237, 33, 255);
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00ff, 0 0 70px #ff00ff, 0 0 80px #ff00ff, 0 0 100px #ff00ff, 0 0 150px #ff00ff;
+    align-self: center;
+    height: fit-content;
+    width: fit-content;
+}
+
+.weatherButton{
+    background-color: blue;
+    border-radius: 1rem;
+    color: white;
+    font-size: 1rem;
+    padding: 1vh 1vw;
+    text-transform: uppercase;
+
+}
+.weatherInput{
+    height: 4vh;
+}
+

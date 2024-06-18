@@ -18,7 +18,7 @@ class MyDataView(APIView):
         # except requests.exceptions.RequestException as e:
         #     return Response({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
         # Handle GET request
-        data = {"message": "Hello, this is a GET response!"}
+        data = {"messages": "Weather Application APP"}
         return Response(data, status=status.HTTP_200_OK)
 
     def post(self, request):
@@ -32,15 +32,20 @@ class MyDataView(APIView):
                 print(external_api_url)
                 response = requests.get(external_api_url)
                 response.raise_for_status()  # Raise an HTTPError for bad responses
-
-                data = response.json()  # Parse the JSON data from the response
+                data = response.json()  
+                print(data)
+                  # Parse the JSON data from the response
                 return Response(data, status=status.HTTP_200_OK)
            
             
         
         except requests.exceptions.RequestException as e:
                 print('abhishek')
-                return Response({"error": 'your location is not found'}) 
+                
+                return Response({"error": 'is not found and not',
+                "main":{"temp":"273",
+                        "feels_like":"273"    
+                }}) 
       
         # Here you can process the received_data as needed
         response_data = {"message": "POST request received!", "data": received_data}
