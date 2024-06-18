@@ -101,9 +101,9 @@ const MyComponent = () => {
             </center>
             
             <div className="weatherInformation">
-            <h3>Temperature   <span className='degree'> {response&&parseInt(response.main.temp-273)} &deg; C</span></h3>
-            <h3>Feels Like      <span className='degree'> {response&&parseInt(response.main.humidity)}%</span></h3>
-           <h3>Feels Like      <span className='degree'> {response&&parseInt(response.main.feels_like-273)}&deg; C  </span></h3>
+            <h4>Temperature   <span className='degree'> {response&&parseInt(response.main.temp-273)} &deg; C</span></h4>
+            <h4>Humdity     <span className='degree'> {response&&parseInt(response.main.humidity)}%</span></h4>
+           <h4>Feels Like   <span className='degree'> {response&&parseInt(response.main.feels_like-273)}&deg; C  </span></h4>
            </div>
         </div>
     </div>
