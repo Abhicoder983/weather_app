@@ -1,7 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import './App.css'
-import myImage1 from './Images/image1.jpg'
+import myImage1 from './Images/sunny.jpg'
+import myImage2 from './Images/rainy.jpg'
+import myImage3 from './Images/snowfall.jpg'
+import myImage4 from './Images/cold.jpg'
 // import myImage2 from './Images/image2.jpg'
 
 
@@ -37,16 +40,24 @@ const MyComponent = () => {
     };
     const imageChanger = ()=>{
         console.log('abhishek3')
-        if (temp>=300){
+        if (temp<='274'){
             imageRef.current.style='display:block'
-            setImage(myImage1)
+            setImage(myImage3)
         }
-        else if(temp>=200){
+        else if(temp<='283'){
+            imageRef.current.style='display:block'
+            setImage(myImage4)
+        }
+        else if (temp<= '293'){
+            imageRef.current.style='display:block'
+            setImage(myImage2)
+        }
+        else if(temp<='313'){
             imageRef.current.style='display:block'
             setImage(myImage1)
         }
         else{
-            setImage("")
+            setImage(null)
         }
 
     }
