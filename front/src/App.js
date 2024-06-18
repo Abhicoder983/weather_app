@@ -102,6 +102,7 @@ const MyComponent = () => {
             
             <div className="weatherInformation">
             <h3>Temperature   <span className='degree'> {response&&parseInt(response.main.temp-273)} &deg; C</span></h3>
+            <h3>Feels Like      <span className='degree'> {response&&parseInt(response.main.humidity)}%</span></h3>
            <h3>Feels Like      <span className='degree'> {response&&parseInt(response.main.feels_like-273)}&deg; C  </span></h3>
            </div>
         </div>

@@ -33,7 +33,8 @@ class MyDataView(APIView):
                 
                 return Response({"error": 'is not found and not',
                 "main":{"temp":"273",
-                        "feels_like":"273"    
+                        "feels_like":"273" ,
+                        "humidity":"0"
                 }}) 
       
        
