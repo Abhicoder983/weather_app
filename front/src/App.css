@@ -18,7 +18,7 @@
 .weatherTitle{
     text-shadow: 0 0 10px #1ef296, 0 0 20px #35d1f4, 0 0 20px #5dd0f0, 0 0 20px #00ff99, 0 0 40px #5dcde1, 0 0 40px #44dcd6, 0 0 40px #2fc1ed, 0 0 40px #43b4e8;
     position:absolute;
-    top: 0;
+    top: 2vh;
     
     
     padding: 2vh 2vw;
