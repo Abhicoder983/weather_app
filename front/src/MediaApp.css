@@ -51,4 +51,9 @@
     }
     
 }
+@media screen and (width<= 295px) {
+    .weatherTitle{
+        font-size: 1.6rem;
+    }
     
+}
