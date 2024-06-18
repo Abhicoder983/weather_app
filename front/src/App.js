@@ -77,9 +77,9 @@ const MyComponent = () => {
         imageChanger,[temp])
     return (
         <div className='body'>
-            
+            <div className='weatherHeader'>
            <h1 className='weatherTitle'>Weather Application</h1>
-            
+           </div>
             <div className="weatherBody">
             <h1 className='heading'>Your Location:-</h1>
             <input

@@ -19,8 +19,8 @@
     text-shadow: 0 0 10px #1ef296, 0 0 20px #35d1f4, 0 0 20px #5dd0f0, 0 0 20px #00ff99, 0 0 40px #5dcde1, 0 0 40px #44dcd6, 0 0 40px #2fc1ed, 0 0 40px #43b4e8;
     position:absolute;
     top: 0;
-    width: 100%;
-    height: 10vh;
+    
+    
     padding: 2vh 2vw;
     display: flex;
     align-items: center;
@@ -30,6 +30,14 @@
    
 
 }
+.weatherHeader{
+    height: 6rem;
+    width: 100vw;
+    padding: 3vh 3vw;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
 
 .weatherBody{
     
@@ -38,6 +46,7 @@
     background-color: rgba(18, 18, 18, 0.601);
     color: rgb(152, 234, 141);
     padding: 5vh 5vw;
+    margin: 4rem 0;
     border: 4px solid rgb(117, 121, 119);
     border-radius: 4rem;
     box-shadow: 0 0 5px 4px rgb(96, 196, 216) ;
@@ -54,8 +63,8 @@
     border-radius: 4rem;
     box-shadow: 0 0 5px 4px rgb(231, 71, 71);
     margin: 3% 0;
-    overflow: hidden; /* Ensure content inside image follows the border radius */
-    animation: image .5s linear forwards ; /* Use keyframes for height transition */
+    overflow: hidden; 
+    animation: image .5s linear forwards ; 
 }
 
 @keyframes image {
