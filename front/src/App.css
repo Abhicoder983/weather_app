@@ -12,7 +12,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: all .5s linear;
+    
 }
 
 .weatherTitle{
@@ -20,7 +20,7 @@
     position:absolute;
     top: 2vh;
     
-    
+    animation: motion 1s linear infinite;
     padding: 2vh 2vw;
     display: flex;
     align-items: center;
@@ -36,7 +36,8 @@
     padding: 3vh 3vw;
     display: flex;
     justify-content: center;
-    align-items: center
+    align-items: center;
+    
 }
 
 .weatherBody{
@@ -75,6 +76,21 @@
         height: 12rem; /* Assuming height to be same as width for a square image */
     }
 }
+
+@keyframes motion {
+    0% {
+        margin-top: 3vh;
+    }
+    50% {
+        margin-top: 5vh;
+    }
+    100% {
+        margin-top: 3vh;
+    }
+    
+    
+}
+
 
 .degree{
     color: red;
