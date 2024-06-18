@@ -25,11 +25,12 @@ const MyComponent = () => {
                 console.log(typeof(res.data.main.temp))
                 if (res.data.main.temp!=='273'){
                    
-                    setTemp(res.data.main.temp)
+                    setTemp(parseInt(res.data.main.temp))
                     console.log('abhishek4')}
                 else{
-                     imageRef.current.style='display:none'
+                    
                     setTemp(null)
+                    setImage(null)
                 }
                 
             })
@@ -40,25 +41,30 @@ const MyComponent = () => {
     };
     const imageChanger = ()=>{
         console.log('abhishek3')
-        if (temp>'0'&&temp<='274'){
+        if (temp>'0'&&temp<=274){
             imageRef.current.style='display:block'
             setImage(myImage3)
         }
-        else if(temp>'0'&&temp<='283'){
+        else if(temp>0 && temp<=283){
             imageRef.current.style='display:block'
             setImage(myImage4)
         }
-        else if (temp>'0'&&temp<= '293'){
+        else if (temp>0 && temp<=298){
             imageRef.current.style='display:block'
             setImage(myImage2)
         }
-        else if(temp>'0'&&temp<='313'){
+        else if(temp>0 && temp<=313){
             imageRef.current.style='display:block'
             setImage(myImage1)
         }
         else{
-             imageRef.current.style='display:none'
-            setImage(null)
+            if(temp===null){
+                imageRef.current.style='display:none'
+            }
+            else{
+            imageRef.current.style='display:block'
+            setImage(myImage1)
+            }
         }
 
     }
@@ -88,7 +94,7 @@ const MyComponent = () => {
             
             <div className="weatherInformation">
             <h3>Temperature   <span className='degree'> {response&&parseInt(response.main.temp-273)} &deg; C</span></h3>
-           <h3>Feels Like      <span className='degree'> {response&&parseInt(response.main.feels_like-273)} &deg; C  </span></h3>
+           <h3>Feels Like      <span className='degree'> {response&&parseInt(response.main.feels_like-273)}&deg; C  </span></h3>
            </div>
         </div>
     </div>
