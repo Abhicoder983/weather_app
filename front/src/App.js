@@ -40,23 +40,24 @@ const MyComponent = () => {
     };
     const imageChanger = ()=>{
         console.log('abhishek3')
-        if (temp<='274'){
+        if (temp>'0'&&temp<='274'){
             imageRef.current.style='display:block'
             setImage(myImage3)
         }
-        else if(temp<='283'){
+        else if(temp>'0'&&temp<='283'){
             imageRef.current.style='display:block'
             setImage(myImage4)
         }
-        else if (temp<= '293'){
+        else if (temp>'0'&&temp<= '293'){
             imageRef.current.style='display:block'
             setImage(myImage2)
         }
-        else if(temp<='313'){
+        else if(temp>'0'&&temp<='313'){
             imageRef.current.style='display:block'
             setImage(myImage1)
         }
         else{
+             imageRef.current.style='display:none'
             setImage(null)
         }
 
