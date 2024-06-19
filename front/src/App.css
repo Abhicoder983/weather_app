@@ -41,7 +41,10 @@
 }
 
 .weatherBody{
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     height: fit-content;
     width: fit-content;
     background-color: rgba(18, 18, 18, 0.601);
@@ -123,6 +126,6 @@
 }
 .weatherInput{
     height: 4vh;
-    margin-right: 3vw;
+    margin-right: 1rem;
 }
 

@@ -83,6 +83,7 @@ const MyComponent = () => {
            </div>
             <div className="weatherBody">
             <h1 className='heading'>Your Location:-</h1>
+            <div>
             <input
                 type='text'
                 className='weatherInput'
@@ -90,7 +91,7 @@ const MyComponent = () => {
                 placeholder='search your city or town'
                 onChange={(e) => setPostData(e.target.value)}
             ></input>
-            <button onClick={handlePost} className='weatherButton'>check</button>
+            <button onClick={handlePost} className='weatherButton'>check</button></div>
              
            
             
@@ -102,9 +103,9 @@ const MyComponent = () => {
             </center>
             
             <div className="weatherInformation">
-            <h4>Temperature   <span className='degree'> {response&&parseInt(response.main.temp-273)} &deg; C</span></h4>
-            <h4>Humdity     <span className='degree'> {response&&parseInt(response.main.humidity)}%</span></h4>
-           <h4>Feels Like   <span className='degree'> {response&&parseInt(response.main.feels_like-273)}&deg; C  </span></h4>
+            <h4 className='information'>Temperature   <span className='degree'> {response&&parseInt(response.main.temp-273)} &deg; C</span></h4>
+            <h4 className='information'>Humdity     <span className='degree'> {response&&parseInt(response.main.humidity)}%</span></h4>
+           <h4 className='information'>Feels Like   <span className='degree'> {response&&parseInt(response.main.feels_like-273)}&deg; C  </span></h4>
            </div>
         </div>
     </div>

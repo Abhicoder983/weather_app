@@ -53,7 +53,38 @@
 }
 @media screen and (width<= 295px) {
     .weatherTitle{
-        font-size: 1.6rem;
+        font-size: 1.1rem;
     }
-    
+    .heading{
+        font-size: 1rem;
+    }
+    .weatherInput{
+        width: 6rem;
+    }
+    .information{
+        font-size: .6rem;
+    }
+    .weatherImage{
+        
+        width: 9rem;
+        height: 10rem !important;
+        
+    }
+  
+    .weatherHeading {
+            font-size: 1rem;
+        }
+    .degree{
+        font-size: 1.3rem;
+    }
 }
+
+@media screen and (width<= 170px) {
+    .information{
+    font-size: .4rem;
+}
+.weatherInput{
+    width: 5rem;
+}
+}
+
