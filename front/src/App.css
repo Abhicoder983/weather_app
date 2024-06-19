@@ -99,12 +99,15 @@
     color: red;
     font-size: 2rem;
     display: block;
-    margin: 0 1rem;
 }
 .weatherInformation{
     display: flex;
     color: aqua;
     justify-content: space-between;
+    margin: 0 1rem;
+}
+.information{
+    margin: 0 1rem;
 }
 .weatherHeading{
     margin: 4vh 0;
