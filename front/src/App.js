@@ -24,6 +24,7 @@ const MyComponent = () => {
         setImage(null)
         imageRef.current.style='display:none'
         setResponse(null)
+        setTemp(null)
         axios.post('https://weather-app-zuqu.onrender.com/api/mydata/', { data: postData })
             .then(res => {
                 setResponse(res.data);
