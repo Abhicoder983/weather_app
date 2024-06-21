@@ -4,12 +4,8 @@ from rest_framework.views import APIView
 from rest_framework import status
 
 class MyDataView(APIView):
-    def get(self, request):
+   
         
-        
-        data = {"messages": "Weather Application APP"}
-        return Response(data, status=status.HTTP_200_OK)
-
     def post(self, request):
         
         received_data = request.data
@@ -31,10 +27,16 @@ class MyDataView(APIView):
         except requests.exceptions.RequestException as e:
                 print('abhishek')
                 
-                return Response({"error": 'is not found and not',
+                return Response({"error": " is not found",
+                                 "coord": {"lon": 0, "lat": 0},
+                                 "wind": {"speed": 0},
                 "main":{"temp":"273",
                         "feels_like":"273" ,
-                        "humidity":"0"
-                }}) 
+                        "humidity":"0",
+                        "pressure":"0",
+
+                        
+                }
+                }) 
       
        

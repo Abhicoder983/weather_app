@@ -1,90 +1,99 @@
-@media screen and (width<= 899px) {
-    .weatherTitle{
-        font-size: 3rem;
+@media screen and (width<=1440px){
+    .information{
+        font-size: 7rem;
     }
+}
+
+@media screen and (width<=705px){
+    .information{
+        font-size: 6rem;
+    }
+}
+
+@media screen and (width<=619px){
+    .information{
+        font-size: 5rem;
+    }
+}
+@media screen and (width<=526px){
+    .weatherBody {
+        flex-wrap: wrap;
+    }
+    
+}
+
+@media screen and (width<=1146px){
+    .informationBox{
+        width:9rem
+    }
+}
+
+@media  screen and (width<= 910px) {
+    .informationBox{
+        width: 7rem;
+    }
+    
+}
+@media screen and (width <=1388px){
     .weatherInput{
-        height: 1.5rem;
+        font-size: 1.1rem;
+        height: 5vh; 
     }
     .weatherButton{
-        font-size: 1rem;
-    }
-
-    .weatherImage {
-        width: 21rem;}
-    .weatherBody{
-        width: fit-content;
-    }
-}
-
-
-@media screen and (width<=442px){
-    .weatherTitle{
-        font-size: 2.5rem;
-    }
-   
-    .weatherButton{
-        font-size: 2rem;
-    }
-    .weatherImage {
-        width: 17rem;
-    }
-    
-}
-
-@media screen and (width<= 470px) {
-    .weatherImage {
-        width: 16rem;
-    }
-    .weatherInput{
-        height: 1.5rem;
-        width: 10rem;
-    }
-    .weatherButton{
-        font-size: .7rem;
-        width: fit-content;
-    }
-    
-}
-@media screen and (width<= 370px) {
-    .weatherTitle {
-        font-size: 2rem;
-    }
-    
-}
-@media screen and (width<= 295px) {
-    .weatherTitle{
+        height: 5vh;
         font-size: 1.1rem;
     }
-    .heading{
-        font-size: 1rem;
+}
+@media screen and (width <= 745px){
+    .weatherInformation{
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap:1rem;
     }
-    .weatherInput{
-        width: 6rem;
+    .weatherBody{
+        flex-direction: column;
     }
-    .information{
-        font-size: .6rem;
+    .otherInfomationBox {
+        margin: 3rem;
     }
-    .weatherImage{
-        
-        width: 9rem;
-        height: 10rem !important;
-        
-    }
-  
     .weatherHeading {
-            font-size: 1rem;
-        }
-    .degree{
-        font-size: 1.3rem;
+        
+        margin: 3rem 4vw;
+    }
+    .information {
+        font-size: 9rem;
+    }
+}
+@media screen and (width<=608px){
+    .weatherHeader {
+        flex-direction: column;
+        align-items: center;
+
+    
+}
+    .weatherInput{
+       margin: .5rem;
+        right: 30vw;
+        width: 11rem;
+    }
+    .weatherButton{
+        right: 25vw;
+        margin: .5rem;
+    }
+    .celcius{
+        height: fit-content;
+        margin-top: 6rem;
     }
 }
 
-@media screen and (width<= 170px) {
-    .information{
-    font-size: .4rem;
-}
-.weatherInput{
-    width: 5rem;
-}
+@media screen and (width<=487px){
+    .information {
+        font-size: 5.5rem;
+    }
 }
 
+@media screen and (width<=425px){
+    .otherInformation{
+        font-size: 1.2rem;
+    }
+}

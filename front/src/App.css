@@ -6,130 +6,172 @@
 
 .body{
     
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+   border: 2px solid rgb(47, 241, 235);
+    margin: 3vh auto;
     
-}
-
-.weatherTitle{
-    text-shadow: 0 0 10px #1ef296, 0 0 20px #35d1f4, 0 0 20px #5dd0f0, 0 0 20px #00ff99, 0 0 40px #5dcde1, 0 0 40px #44dcd6, 0 0 40px #2fc1ed, 0 0 40px #43b4e8;
-    position:absolute;
-    top: 2vh;
-    
-    animation: motion 1s linear infinite;
-    padding: 2vh 2vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: rgb(9, 255, 239);
-    font-size: 4rem;
-   
+    width: 90%;
+   box-shadow: 0 0 10px 4px rgb(47, 241, 235);
+    color: white;
+    padding: 3vh 3vw 3vh 3vw;
+    border-radius: 3rem;
 
 }
 .weatherHeader{
-    height: 6rem;
-    width: 100vw;
-    padding: 3vh 3vw;
     display: flex;
-    justify-content: center;
-    align-items: center;
     
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+    font-size: 1.2rem;
+
+}
+.weatherTitle{
+    font-family: "Playwrite ES", cursive;
+    font-optical-sizing: auto;
+    font-weight:weight;
+    font-style: normal
+}
+.city{
+    display: inline-block;
+    font-size: 1.4rem;
+    margin: 2vh 0 0 2vw;
+}
+.citys{
+    font-size: 1.4rem;
+    margin-left: 1vw;
 }
 
+.weatherInput{
+    height: 7vh;
+    width: 23vw;
+    font-size: 1.5rem;
+    position: absolute;
+    right:18%;
+    text-indent: 6%;
+    margin-top: -4vh;
+    border-top-right-radius: 0%;
+    border-bottom-right-radius: 0%;
+    border: none;
+    border-top-left-radius: 3em;
+    border-bottom-left-radius: 3em;
+    border-color: white;
+}
+
+.weatherButton{
+    font-family: "Merriweather", serif;
+  font-weight: 300;
+  font-style: normal;
+font-size: 2rem;
+    position: absolute;
+    margin-top: -4vh;
+    right: 6%;
+    height: 7vh;
+    width: 15vw;
+    z-index: 5;
+    text-align: center;
+    border-top-left-radius: 3em;
+    border-bottom-left-radius: 3em;
+    border-top-right-radius: 3em;
+    border-bottom-right-radius: 3em;
+    border: none;
+    background-color: rgb(125, 172, 249);
+    padding: 0 0.5rem;
+    color: rgb(251, 251, 251);
+  
+}
+
+
 .weatherBody{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: fit-content;
+
+   padding: 3vh 3vw;
+}
+.information{
+    font-size: 9rem;
+}
+
+.otherInformation{
+    font-size: 2rem;
+    font-family: "Kanit", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+
+}
+
+
+
+
+
+.weatherHeading{
+    height: 10vh;
+    margin:4vh 4vw;
+    text-align: center;
+}
+
+.weatherInformation{
+
+    height: 10rem;
+    margin-bottom: 1vh;
+    width: 100%;
+    background-color: rgba(124, 123, 123, 0.558);
+    border-radius: 1em;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+   place-items: center;
+   border: 2px solid rgb(2, 250, 238);
+   box-shadow: 0 0 0.5em .1em rgb(3, 198, 242);
+    gap: 3rem;
+}
+
+
+.otherInfomationBox{
+    margin-left: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.weatherInformation{
+    height: fit-content;
+    padding: 1rem 1rem;
+
+}
+
+.informationBox{
+    width: 12rem;
+    height: 9rem;
+
+    opacity: 100%;
+    border-radius: .5em;
+    padding: 3rem 3rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: fit-content;
-    width: fit-content;
-    background-color: rgba(18, 18, 18, 0.601);
-    color: rgb(152, 234, 141);
-    padding: 5vh 5vw;
-    margin: 4rem 0;
-    border: 4px solid rgb(117, 121, 119);
-    border-radius: 4rem;
-    box-shadow: 0 0 5px 4px rgb(96, 196, 216) ;
-}
-.heading{
-    display: block;
-    margin-bottom: 4vh;
-}
+    background-color: rgba(152, 152, 156, 0.934);
+    border: 2px solid rgba(0, 0, 0, 0.625);
+    box-shadow: 0 0 0.5em rgb(246, 246, 246);
+   
 
-.weatherImage {
-    width: 28rem;
-    height: 0;
-    display: none;
-    border-radius: 4rem;
-    box-shadow: 0 0 5px 4px rgb(231, 71, 71);
-    margin: 3% 0;
-    overflow: hidden; 
-    animation: image .5s linear forwards ; 
 }
-
-@keyframes image {
-    0% {
-        height: 0;
-    }
-    100% {
-        height: 12rem; /* Assuming height to be same as width for a square image */
-    }
-}
-
-@keyframes motion {
-    0% {
-        margin-top: 3vh;
-    }
-    50% {
-        margin-top: 5vh;
-    }
-    100% {
-        margin-top: 3vh;
-    }
-    
-    
-}
-
 
 .degree{
-    color: red;
+    font-size: 1.5rem;
+    font-family: "Playwrite PT", cursive;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+.headingCity{
+    padding: 0;
+    margin: 0;
     font-size: 2rem;
-    display: block;
-}
-.weatherInformation{
-    display: flex;
-    color: aqua;
-    justify-content: space-between;
-    margin: 0 1rem;
-}
-.information{
-    margin: 0 1rem;
-}
-.weatherHeading{
-    margin: 4vh 0;
-
-    color: rgb(237, 33, 255);
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00ff, 0 0 70px #ff00ff, 0 0 80px #ff00ff, 0 0 100px #ff00ff, 0 0 150px #ff00ff;
-    align-self: center;
-    height: fit-content;
-    width: fit-content;
 }
 
-.weatherButton{
-    background-color: blue;
-    border-radius: 1rem;
-    color: white;
-    font-size: 1rem;
-    padding: 1vh 1vw;
-    text-transform: uppercase;
-
-}
-.weatherInput{
-    height: 4vh;
-    margin-right: 1rem;
-}
 
