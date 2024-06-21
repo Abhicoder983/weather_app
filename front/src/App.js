@@ -22,7 +22,7 @@ const MyComponent = () => {
         setResponse(null)
         
         setTemp(null)
-        axios.post(' http://127.0.0.1:8000/api/mydata/', { data: postData })
+        axios.post('https://weather-app-zuqu.onrender.com/api/mydata/', { data: postData })
             .then(res => {
                 setResponse(res.data);
                 console.log(typeof (res.data.main.temp))
