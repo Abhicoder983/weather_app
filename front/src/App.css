@@ -27,6 +27,7 @@
 
 }
 .weatherTitle{
+    margin-top: 2rem;
     font-family: "Playwrite ES", cursive;
     font-optical-sizing: auto;
     font-weight:weight;
@@ -65,11 +66,14 @@
 font-size: 2rem;
     position: absolute;
     margin-top: -4vh;
-    right: 6%;
+    right: 15vw;
+    padding: 0.5rem 1rem;
     height: 7vh;
-    width: 15vw;
-    z-index: 5;
-    text-align: center;
+    width: fit-content;
+   
+   display: flex;
+   align-items: center;
+   justify-content: center;
     border-top-left-radius: 3em;
     border-bottom-left-radius: 3em;
     border-top-right-radius: 3em;
@@ -79,6 +83,9 @@ font-size: 2rem;
     padding: 0 0.5rem;
     color: rgb(251, 251, 251);
   
+}
+.spinner{
+    margin-left: 1em;
 }
 
 
@@ -95,7 +102,8 @@ font-size: 2rem;
 }
 
 .otherInformation{
-    font-size: 2rem;
+    font-size: 2.3rem;
+    
     font-family: "Kanit", sans-serif;
     font-weight: 100;
     font-style: normal;
@@ -117,20 +125,20 @@ font-size: 2rem;
     height: 10rem;
     margin-bottom: 1vh;
     width: 100%;
-    background-color: rgba(124, 123, 123, 0.558);
+  
     border-radius: 1em;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(1, 1fr);
    place-items: center;
-   border: 2px solid rgb(2, 250, 238);
-   box-shadow: 0 0 0.5em .1em rgb(3, 198, 242);
+   border: 1px solid rgb(244 2 250);
+   box-shadow: 0 0 0.5em .1em rgb(218 3 242);
     gap: 3rem;
 }
 
 
 .otherInfomationBox{
-    margin-left: 3rem;
+    margin-left: 2.5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -154,7 +162,7 @@ font-size: 2rem;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: rgba(152, 152, 156, 0.934);
+   
     border: 2px solid rgba(0, 0, 0, 0.625);
     box-shadow: 0 0 0.5em rgb(246, 246, 246);
    

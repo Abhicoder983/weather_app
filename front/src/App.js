@@ -6,6 +6,7 @@ import './App.css'
 import './MediaApp.css'
 import background from './Images/backgroundImage.webp'
 // import myImage2 from './Images/image2.jpg'
+import { ClipLoader } from 'react-spinners'
 
 
 const MyComponent = () => {
@@ -14,17 +15,19 @@ const MyComponent = () => {
     const [response, setResponse] = useState(null);
     const [image, setImage] = useState('');
     const [temp, setTemp] = useState(null);
+    const [loading, setLoading] = useState(false);
     const imageRef = useRef(null)
 
    
     const handlePost = () => {
         //
         setResponse(null)
-        
+        setLoading(true)
         setTemp(null)
         axios.post('https://weather-app-zuqu.onrender.com/api/mydata/', { data: postData })
             .then(res => {
                 setResponse(res.data);
+                setLoading(false)
                 console.log(typeof (res.data.main.temp))
                 if (res.data.main.temp !== '273') {
 
@@ -39,6 +42,7 @@ const MyComponent = () => {
 
             })
             .catch(err => {
+                setLoading(false)
                 console.log(err);
 
             });
@@ -107,7 +111,7 @@ const MyComponent = () => {
 
                     ></input>
 
-                    <button onClick={handlePost} className='weatherButton'>Check</button>
+                    <button onClick={handlePost} className='weatherButton'>Check <span className='spinner'><ClipLoader color={"white"} loading={loading} size={25} /></span></button>
                 </div>
 
             </div>
@@ -140,7 +144,7 @@ const MyComponent = () => {
 
                <h1 className='weatherHeading headingCity'><span>CITY/TOWN:-{postData}</span></h1> 
 
-            <h1 className='weatherHeading'>Your weather {response && response.error}</h1>
+            <h1 className='weatherHeading'>Your City weather {response && response.error}</h1>
 
 
         <div className="weatherInformation">
