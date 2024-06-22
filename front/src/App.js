@@ -144,7 +144,7 @@ const MyComponent = () => {
 
                <h1 className='weatherHeading headingCity'><span>CITY/TOWN:-{postData}</span></h1> 
 
-            <h1 className='weatherHeading'>Your City weather {response && response.error}</h1>
+            <h1 className='weatherHeading'>Your City weather <span className='error'>{response && response.error}</span></h1>
 
 
         <div className="weatherInformation">

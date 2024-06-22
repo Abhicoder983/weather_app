@@ -119,6 +119,8 @@ font-size: 2rem;
     margin:4vh 4vw;
     text-align: center;
 }
+.error{
+    color: rgb(255, 0, 0);}
 
 .weatherInformation{
 

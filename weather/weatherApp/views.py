@@ -27,7 +27,7 @@ class MyDataView(APIView):
         except requests.exceptions.RequestException as e:
                 print('abhishek')
                 
-                return Response({"error": " is not found",
+                return Response({"error": "(not found)",
                                  "coord": {"lon": 0, "lat": 0},
                                  "wind": {"speed": 0},
                 "main":{"temp":"273",
