@@ -125,11 +125,11 @@ const MyComponent = () => {
                 <img src={image} ref={imageRef} alt="" className='weatherImage' />
                     <div>
                     <h2 className='otherInformation'>
-                    <img  width="30" height="30" src="https://img.icons8.com/ios/50/ffffff/humidity.png" alt="humidity"/>
+                    <img  width="30" height="30" src="https://img.icons8.com/ios/50/ffffff/humidity.png" alt="humidity" className='weatherImage'/>
                     Humidity <span className='degree'> {response==null? '0':''}</span>    <span className='degree'> {response && parseInt(response.main.humidity)}%</span></h2>
                     
                     <h3 className='otherInformation'>
-                    <img width="30" height="30" src="https://img.icons8.com/ios/50/ffffff/apple-weather.png" alt="apple-weather"/>
+                    <img width="30" height="30" src="https://img.icons8.com/ios/50/ffffff/apple-weather.png" alt="apple-weather" className='weatherImage'/>
                         Feels Like  <span className='degree'> {response==null? '0':''}</span> <span className='degree'> {response && parseInt(response.main.feels_like-273)}&deg; C  
                             
                         </span></h3>

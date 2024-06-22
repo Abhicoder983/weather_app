@@ -66,7 +66,7 @@
 font-size: 2rem;
     position: absolute;
     margin-top: -4vh;
-    right: 15vw;
+    right: 16vw;
     padding: 0.5rem 1rem;
     height: 7vh;
     width: fit-content;
@@ -84,8 +84,8 @@ font-size: 2rem;
     color: rgb(251, 251, 251);
   
 }
-.spinner{
-    margin-left: 1em;
+.weatherImage{
+    margin-right: 1rem;
 }
 
 
@@ -103,7 +103,7 @@ font-size: 2rem;
 
 .otherInformation{
     font-size: 2.3rem;
-    
+
     font-family: "Kanit", sans-serif;
     font-weight: 100;
     font-style: normal;

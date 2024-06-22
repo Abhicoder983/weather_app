@@ -64,7 +64,7 @@
 @media screen and (width <= 619px) {
     .information {
         font-size: 5rem;
-        margin: 3rem 0;
+        margin: 6rem 0 0 0;
     }
 }
 
@@ -80,7 +80,7 @@
         width: 11rem;
     }
     .weatherButton {
-        right: 24%;
+        right: 26%;
         
         margin: 3rem 0;
     }
