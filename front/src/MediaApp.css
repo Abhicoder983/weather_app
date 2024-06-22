@@ -88,6 +88,8 @@
         height: fit-content;
         margin-top: 6rem;
     }
+    .weatherTitle {
+        margin-top: 0rem;}
 }
 
 @media screen and (width <= 526px) {
