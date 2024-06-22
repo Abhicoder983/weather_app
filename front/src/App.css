@@ -97,7 +97,7 @@ font-size: 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: fit-content;
+    height:16rem;
 
    padding: 3vh 3vw;
 }
@@ -152,7 +152,7 @@ font-size: 2rem;
 
 }
 .weatherInformation{
-    height: fit-content;
+    height: 12rem;
     padding: 1rem 1rem;
 
 }
@@ -187,5 +187,110 @@ font-size: 2rem;
     margin: 0;
     font-size: 2rem;
 }
+
+/* animation */
+.my-node-enter {
+    opacity: 0;
+    transform: translateX(-60%);
+  }
+  .my-node-enter-active {
+    opacity: 1;
+    transform: translateX(0%);
+    transition: opacity 1000ms , transform 1000ms;
+  }
+  .my-node-exit {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+  .my-node-exit-active {
+    opacity: 0;
+    transform: translateX(-60%);
+    transition: opacity 1000ms , transform 1000ms;
+  }
+
+
+.image-node-enter{
+    transform: translateX(100%);
+opacity: 0;
+}
+.image-node-enter-active{
+transform: translateX(0);
+opacity: 1;
+transition: opacity 1000ms, transform 1000ms;
+}
+
+.image-node-exit{
+    transform: translateX(0);
+    opacity: 1;
+}
+.image-node-exit-active{
+    transform: translateX(100%);
+    opacity: 0;
+    transition: opacity 1000ms, transform 1000ms;
+} 
+
+
+.other-informationBox-enter{
+    transform: translateY(100%);
+opacity: 0;
+}
+.other-informationBox-enter-active{
+transform: translateX(0);
+opacity: 1;
+transition: opacity 1000ms, transform 1000ms;
+}
+
+.other-informationBox-exit{
+    transform: translateX(0);
+    opacity: 1;
+}   
+.other-informationBox-exit-active{
+    transform: translateY(100%);
+    opacity: 0;
+    transition: opacity 1000ms, transform 1000ms;
+}
+
+
+.image-nodeNext-enter{
+    transform: translateX(70%);
+opacity: 0;
+}
+.image-nodeNext-enter-active{
+transform: translateX(0);
+opacity: 1;
+transition: opacity 1000ms, transform 1000ms;
+}
+
+.image-nodeNext-exit{
+    transform: translateX(0);
+    opacity: 1;
+}
+.image-nodeNext-exit-active{
+    transform: translateX(70%);
+    opacity: 0;
+    transition: opacity 1000ms, transform 1000ms;
+} 
+
+
+.image-nodeNextleft-enter{
+    transform: translateX(70%);
+opacity: 0;
+}
+.image-nodeNextleft-enter-active{
+transform: translateX(0);
+opacity: 1;
+transition: opacity 1000ms, transform 1000ms;
+}
+
+.image-nodeNextleft-exit{
+    transform: translateX(0);
+    opacity: 1;
+}
+.image-nodeNextleft-exit-active{
+    transform: translateX(70%);
+    opacity: 0;
+    transition: opacity 1000ms, transform 1000ms;
+} 
+
 
 

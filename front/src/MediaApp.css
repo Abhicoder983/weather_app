@@ -37,15 +37,17 @@
 
 @media screen and (width <= 745px) {
     .weatherInformation {
+        height: 23rem;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
         gap: 1rem;
     }
     .weatherBody {
         flex-direction: column;
+        height: 33rem;
     }
     .otherInfomationBox {
-        margin: 3rem;
+        margin: 2rem;
     }
     .weatherHeading {
         margin: 3rem 4vw;
@@ -53,11 +55,35 @@
     .information {
         font-size: 9rem;
     }
+
+    .image-nodeNextleft-enter{
+        transform: translateX(-70%);
+    opacity: 0;
+    }
+    .image-nodeNextleft-enter-active{
+    transform: translateX(0);
+    opacity: 1;
+    transition: opacity 1000ms, transform 1000ms;
+    }
+    
+    .image-nodeNextleft-exit{
+        transform: translateX(0);
+        opacity: 1;
+    }
+    .image-nodeNextleft-exit-active{
+        transform: translateX(-70%);
+        opacity: 0;
+        transition: opacity 1000ms, transform 1000ms;
+    } 
+    
+    
+    
+    
 }
 
 @media screen and (width <= 705px) {
     .information {
-        font-size: 6rem;
+        font-size: 9rem;
     }
 }
 
@@ -92,11 +118,7 @@
         margin-top: 0rem;}
 }
 
-@media screen and (width <= 526px) {
-    .weatherBody {
-        flex-wrap: wrap;
-    }
-}
+
 
 @media screen and (width <= 487px) {
     .information {
