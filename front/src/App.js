@@ -130,7 +130,7 @@ const MyComponent = () => {
 
                     ><h1 className='information'><span> {response == null ? '0' : ''}</span> <span> {response && parseInt(response.main.temp - 273)} &deg; C</span></h1></CSSTransition>
                 </div>
-
+                <ClipLoader color={"white"} loading={loading} size={150} />
                 <div className='otherInfomationBox'>
                     <CSSTransition
                         in={applyCss}
@@ -201,7 +201,7 @@ const MyComponent = () => {
                     <p className='degree'>{response == null ? '0' : ''}<span>{response && parseInt(response.coord.lat)}</span></p>
                 </div>
                 </CSSTransition>
-
+                
                 <CSSTransition
                 in={applyCss}
                 timeout={1000}
