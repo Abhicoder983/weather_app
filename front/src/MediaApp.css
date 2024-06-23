@@ -39,7 +39,7 @@
     }
 }
 
-@media screen and (width <= 745px) {
+@media screen and (width <= 772px) {
     .weatherInformation {
         height: 23rem;
         grid-template-columns: repeat(2, 1fr);
@@ -58,6 +58,7 @@
     }
     .information {
         font-size: 9rem;
+        margin-top: 4rem;
     }
 
     .image-nodeNextleft-enter{
@@ -116,7 +117,7 @@
     }
     .celcius {
         height: fit-content;
-        margin-top: 6rem;
+        margin-top: 2rem;
     }
     .weatherTitle {
         margin-top: 0rem;}
