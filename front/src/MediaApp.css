@@ -7,11 +7,13 @@
 @media screen and (width <= 1388px) {
     .weatherInput {
         font-size: 1.1rem;
-        height: 5vh;
+        height: 9vh;
+        margin-top: .4rem;
     }
     .weatherButton {
-        height: 5vh;
+        height: 9vh;
         font-size: 1.1rem;
+        margin-top: .4rem;
     }
 }
 
@@ -20,12 +22,14 @@
         width: 9rem;
     }
     .weatherInput {
-        font-size: .7rem;
-        height: 5vh;
+        height: 7vh;
+        margin-top: .6rem;
+        font-size: .5rem;
     }
     .weatherButton {
-        height: 5vh;
+        height: 7vh;
         font-size: 1rem;
+        margin-top: .6rem;
     }
 }
 
@@ -100,14 +104,16 @@
         align-items: center;
     }
     .weatherInput {
+    
         margin: 3rem 0;
-        right: 25vw;
-       
+        right: 37vw;
+       height: 10vh;
         width: 11rem;
     }
     .weatherButton {
-        right: 19vw;
-        
+    
+        right: 29vw;
+      height: 10vh ;
         margin: 3rem 0;
     }
     .celcius {
@@ -130,29 +136,34 @@
     .otherInformation {
         font-size: 1.2rem;
     }
+    .weatherButton{
+        right: 26vw;
+    }
+    .weatherInput{
+        right: 33vw;
+    }
 }
+
 
 @media screen and (width <= 374px) {
     .weatherTitle {
         font-size: 1.4rem;
+    }
+    .weatherInput {
+        right: 32vw;
     }
     
 }
 
 @media screen and (width <= 310px) {
     .weatherInput {
-        right: 33%;
+        right: 33vw;
         width: 9rem;
     }
     .weatherButton {
-        right: 17%;
+        right: 17vw;
     }
-    .weatherInput {
-        height: 7vh;
-    }
-    .weatherButton {
-            height: 7vh;
-        }
+    
     
     .degree {
             font-size: 1rem;

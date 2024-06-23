@@ -103,7 +103,7 @@ const MyComponent = () => {
                 </div>
 
 
-                <div>
+                <div className='search'>
                     <input
                         type='text'
                         className='weatherInput'

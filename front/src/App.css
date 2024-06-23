@@ -291,6 +291,13 @@ transition: opacity 1000ms, transform 1000ms;
     opacity: 0;
     transition: opacity 1000ms, transform 1000ms;
 } 
+.search{
+    width: 100vw;
+    height: fit-content;
+    padding: 3vh;
+    display: flex;
+    justify-content: center;
+}
 .loader1{
     height: fit-content;
     width: fit-content;
