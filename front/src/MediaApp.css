@@ -131,3 +131,37 @@
         font-size: 1.2rem;
     }
 }
+
+@media screen and (width <= 374px) {
+    .weatherTitle {
+        font-size: 1.2rem;
+    }
+    
+}
+
+@media screen and (width <= 310px) {
+    .weatherInput {
+        right: 32%;
+        width: 9rem;
+    }
+    .weatherButton {
+        right: 18%;
+    }
+    .weatherInput {
+        height: 7vh;
+    }
+    .weatherButton {
+            height: 7vh;
+        }
+    
+    .degree {
+            font-size: 1rem;
+        }
+    .weatherHeading {
+            margin: 2rem 4vw;
+            font-size: 1.3rem;
+        }
+    .informationBox {
+            width: 6rem;
+        }
+}

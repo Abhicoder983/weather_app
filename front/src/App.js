@@ -114,7 +114,7 @@ const MyComponent = () => {
 
                     ></input>
 
-                    <button onClick={handlePost} className='weatherButton'>Check <span className='spinner'><ClipLoader color={"white"} loading={loading} size={25} /></span></button>
+                    <button onClick={handlePost} className='weatherButton'>Check <span className='spinner'><ClipLoader color={"white"} loading={loading} size={25}  /></span></button>
                 </div>
 
             </div>
@@ -130,7 +130,7 @@ const MyComponent = () => {
 
                     ><h1 className='information'><span> {response == null ? '0' : ''}</span> <span> {response && parseInt(response.main.temp - 273)} &deg; C</span></h1></CSSTransition>
                 </div>
-                <ClipLoader color={"white"} loading={loading} size={150} />
+                <ClipLoader color={"white"} loading={loading} size={150} cssOverride={{ position:'absolute',top:'50%' }}/>
                 <div className='otherInfomationBox'>
                     <CSSTransition
                         in={applyCss}
@@ -201,7 +201,7 @@ const MyComponent = () => {
                     <p className='degree'>{response == null ? '0' : ''}<span>{response && parseInt(response.coord.lat)}</span></p>
                 </div>
                 </CSSTransition>
-                
+                <ClipLoader color={"white"} loading={loading} size={150} cssOverride={{ position:'absolute',top:'150%' }}/>
                 <CSSTransition
                 in={applyCss}
                 timeout={1000}
