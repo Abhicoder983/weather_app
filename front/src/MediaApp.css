@@ -101,12 +101,12 @@
     }
     .weatherInput {
         margin: 3rem 0;
-        right: 35%;
+        right: 25vw;
        
         width: 11rem;
     }
     .weatherButton {
-        right: 26%;
+        right: 19vw;
         
         margin: 3rem 0;
     }
@@ -141,11 +141,11 @@
 
 @media screen and (width <= 310px) {
     .weatherInput {
-        right: 32%;
+        right: 33%;
         width: 9rem;
     }
     .weatherButton {
-        right: 18%;
+        right: 17%;
     }
     .weatherInput {
         height: 7vh;
