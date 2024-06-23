@@ -185,7 +185,7 @@ const MyComponent = () => {
                 <div className="informationBox">
                     <img width="50" height="50" src="https://img.icons8.com/fluency/48/latitude.png" alt="latitude" />
                     <p className='degree'><span className='degree'>Latitude </span></p>
-                    <p className='degree'><span>{response == null ? '0' : ''}</span>{response && parseInt(response.coord.lon)}&deg;</p>
+                    <p className='degree'><span>{response == null ? '0' : ''}</span>{response && parseInt(response.coord.lat)}&deg;</p>
 
                 </div>
                 </CSSTransition>
@@ -200,7 +200,7 @@ const MyComponent = () => {
                     <img width="50" height="50"
                         src="https://img.icons8.com/officel/40/longitude.png" alt="longitude" />
                     <p className='degree'><span className='degree'>Longitude </span></p>
-                    <p className='degree'>{response == null ? '0' : ''}<span>{response && parseInt(response.coord.lat)} &deg; </span></p>
+                    <p className='degree'><span>{response == null ? '0' : ''}</span>{response && parseInt(response.coord.lon)}&deg;</p>
                 </div>
                 </CSSTransition>
                 <div className="loader2">
