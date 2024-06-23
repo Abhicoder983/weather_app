@@ -291,6 +291,23 @@ transition: opacity 1000ms, transform 1000ms;
     opacity: 0;
     transition: opacity 1000ms, transform 1000ms;
 } 
+.loader1{
+    height: fit-content;
+    width: fit-content;
+    position:absolute;
+    position:'absolute';
+    top:'25vh';
+    left:'45vw'
+}
+
+.loader2{
+    height: fit-content;
+    width: fit-content;
+    position:absolute;
+    position:'absolute';
+    top:'80vh';
+    left:'45vw'
+}
 
 
 
