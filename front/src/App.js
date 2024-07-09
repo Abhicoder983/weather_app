@@ -26,7 +26,7 @@ const MyComponent = () => {
         setResponse(null)
         setLoading(true)
         
-        axios.post('https://weather-app-zuqu.onrender.com/api/mydata/', { data: postData })
+        axios.post('https://weather-app-z7n4.vercel.app/api/mydata/', { data: postData })
             .then(res => {
                 setResponse(res.data);
                 setLoading(false)
