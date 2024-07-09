@@ -41,7 +41,7 @@ const MyComponent = () => {
                 }
                 else {
                 
-                    toast.warn("(Invalid Location)",{
+                    toast.warn("Invalid Location!",{
                         position: "top-center",
                         autoClose: 5000,
                         hideProgressBar: false,
