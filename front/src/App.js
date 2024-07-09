@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { CSSTransition } from 'react-transition-group';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
@@ -35,10 +37,17 @@ const MyComponent = () => {
                 if (res.data.main.temp !== '273') {
 
                     setTemp(parseInt(res.data.main.temp))
-                    console.log('abhishek4')
+                    
                 }
                 else {
-
+                
+                    toast.warn("(Invalid Location)",{
+                        position: "top-center",
+                        autoClose: 5000,
+                        hideProgressBar: false,
+                        draggable: true,
+                       
+                    });
                     setTemp(null)
                     setImage("https://img.icons8.com/nolan/64/image.png")
                 }
@@ -46,12 +55,12 @@ const MyComponent = () => {
             })
             .catch(err => {
                 setLoading(false)
-                console.log(err);
+                
 
             });
     };
     const imageChanger = () => {
-        console.log('abhishek3')
+       
         if (temp > '0' && temp <= 274) {
 
             setImage("https://img.icons8.com/3d-fluency/96/snow.png")
@@ -92,7 +101,7 @@ const MyComponent = () => {
         imageChanger, [temp, response])
     return (
         <div className='body' style={{ backgroundImage: 'url(' + background + ')' }}>
-
+            <ToastContainer />
             <div className='weatherHeader'>
                 <div>
                     <h2 className='weatherTitle'>Weather Application<br />
