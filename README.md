@@ -31,3 +31,6 @@ cd front
 ```bash 
 npm start
 ```
+
+
+[LINK OF DEPLOYED PROJECT](https://github.com/Abhicoder983/weather_app)
