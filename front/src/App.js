@@ -37,6 +37,12 @@ const MyComponent = () => {
                 if (res.data.main.temp !== '273') {
 
                     setTemp(parseInt(res.data.main.temp))
+                    toast.success("Successfully Fetched",{
+                        position:"top-center",
+                        draggable:true,
+                        autoClose:5000,
+                        hideProgressBar:false
+                    })
                     
                 }
                 else {
