@@ -9,7 +9,6 @@ class MyDataView(APIView):
     def post(self, request):
         
         received_data = request.data
-        print(received_data)
         try:
                 
                
