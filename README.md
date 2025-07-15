@@ -1,36 +1,131 @@
-# weather_application
-## How TO Use it:-
-### step1 ->first we have the copy the link of the repo 
-### step2 -> now create a new folder and open the git bash here
-### step3-> copy this code and replace the repo link with repo link you have copied
- 
- ```bash
-git clone 'repo link'
-```
-### step4-> now open the repo folder and open with vs code inside the repo folder
+# 🔗 URL Shortener Microservice
 
-### step4-> now open the terminal and activate your virtual environment
+A simple Django-based URL shortening service with access token authentication. Built as part of the Affordmed Campus Drive test.
 
-```bash 
-myenv/Scripts/activate
+---
+
+## 🚀 Features
+
+- Shorten long URLs
+- Custom shortcode support
+- Expiry time (in minutes)
+- Redirect to original URL
+- Click tracking and last access time
+- Token-based authentication using access token
+
+---
+
+## 🛠️ Tech Stack
+
+- Python 3
+- Django
+- Django REST Framework
+- SQLite (default)
+- Token Authentication (via Bearer Token)
+
+---
+
+## 📦 Installation
+
+### 1. Clone the Project
+```bash
+git clone <your_repo_url>
+cd url_shortener_microservice
 ```
-### step5-> come inside the weather folder
+
+### 2. Create Virtual Environment (Recommended)
+
+Using built-in venv:
 ```bash
-cd weather
- ```
-### step6-> run the django server
+python -m venv venv
+```
+
+Activate:
+
+- **Windows CMD**: `venv\Scripts\activate`
+- **PowerShell**: `.env\Scripts\Activate.ps1`
+- **macOS/Linux**: `source venv/bin/activate`
+
+### 3. Install Dependencies
 ```bash
+pip install -r requirements.txt
+```
+
+---
+
+## ⚙️ Setup
+
+### .env File
+
+Create a `.env` file and add:
+```
+ACCESS_TOKEN=abcdef123456
+```
+
+---
+
+## 💡 API Usage
+
+### 🔐 Add This Header to All Requests
+
+```
+Authorization: Bearer abcdef123456
+```
+
+### 1. Create Short URL
+
+**POST** `/shorturls`
+
+#### Body:
+```json
+{
+  "url": "https://www.example.com",
+  "shortcode": "abc123",     // optional
+  "validity": 30             // in minutes
+}
+```
+
+### 2. Redirect
+
+**GET** `/:shortcode`  
+Redirects to original URL if not expired.
+
+### 3. Get Stats
+
+**GET** `/shorturls/:shortcode`
+
+#### Response:
+```json
+{
+  "shortcode": "abc123",
+  "original_url": "https://www.example.com",
+  "created_at": "...",
+  "expiry_time": "...",
+  "clicks": 5,
+  "last_clicked": "..."
+}
+```
+
+---
+
+## 🧪 Run the Server
+
+```bash
+python manage.py migrate
 python manage.py runserver
 ```
 
-### step7-> now open the new terminal for starting the react server
-```bash
-cd front
-```
-### step8-> now run your react server
-```bash 
-npm start
-```
+Visit: [http://localhost:8000](http://localhost:8000)
 
+---
 
-[LINK OF DEPLOYED PROJECT](https://github.com/Abhicoder983/weather_app)
+## 📤 Deployment Tips
+
+- Use `render.com`, `railway.app`, or Docker
+- Change `localhost` to your domain in model method `.short_link()`
+
+---
+
+## 📄 License
+
+This project is part of the Affordmed evaluation. Not for commercial reuse.
