@@ -1,10 +1,10 @@
-# 🔗 URL Shortener Microservice
+#  URL Shortener Microservice
 
 A simple Django-based URL shortening service with access token authentication. Built as part of the Affordmed Campus Drive test.
 
 ---
 
-## 🚀 Features
+## Features
 
 - Shorten long URLs
 - Custom shortcode support
@@ -15,7 +15,7 @@ A simple Django-based URL shortening service with access token authentication. B
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 - Python 3
 - Django
@@ -25,7 +25,7 @@ A simple Django-based URL shortening service with access token authentication. B
 
 ---
 
-## 📦 Installation
+##  Installation
 
 ### 1. Clone the Project
 ```bash
@@ -53,7 +53,7 @@ pip install -r requirements.txt
 
 ---
 
-## ⚙️ Setup
+##  Setup
 
 ### .env File
 
@@ -64,9 +64,9 @@ ACCESS_TOKEN=abcdef123456
 
 ---
 
-## 💡 API Usage
+##  API Usage
 
-### 🔐 Add This Header to All Requests
+###  Add This Header to All Requests
 
 ```
 Authorization: Bearer abcdef123456
@@ -119,13 +119,4 @@ Visit: [http://localhost:8000](http://localhost:8000)
 
 ---
 
-## 📤 Deployment Tips
 
-- Use `render.com`, `railway.app`, or Docker
-- Change `localhost` to your domain in model method `.short_link()`
-
----
-
-## 📄 License
-
-This project is part of the Affordmed evaluation. Not for commercial reuse.
