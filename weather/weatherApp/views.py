@@ -1,6 +1,6 @@
 from rest_framework.response import Response
 import requests
-from decouple import config
+\
 from rest_framework.views import APIView
 from rest_framework import status
 
@@ -10,6 +10,7 @@ class MyDataView(APIView):
     def post(self, request):
         
         received_data = request.data
+        print(received_data)
         try:
                 
                
