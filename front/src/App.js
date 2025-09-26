@@ -123,6 +123,7 @@ const MyComponent = () => {
             
             ({latitude,longitude} = position.coords)
             console.log(latitude, longitude)
+            toast.success('Location is detect')
             
             handlePost(latitude,longitude)
 
