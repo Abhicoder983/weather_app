@@ -133,7 +133,7 @@ const MyComponent = () => {
 
           },
           (error)=>{
-             
+            setLoading(false) 
             toast.warn("please provide the location access. After that refresh it ")
             return ;
           
