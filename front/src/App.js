@@ -13,7 +13,7 @@ import { ClipLoader } from 'react-spinners'
 
 
 const MyComponent = () => {
-
+    const [firstrun, setfirstRun]=useState(1)
     const [postData, setPostData] = useState('');
     const [response, setResponse] = useState(null);
     const [image, setImage] = useState('');
@@ -23,17 +23,22 @@ const MyComponent = () => {
     const [applyCss, setApplyCss] = useState(true)
 
 
-    const handlePost = () => {
+
+    const handlePost = (lat="", lon="") => {
         setApplyCss(false)
         setResponse(null)
         setLoading(true)
-        
-        axios.post('https://weather-app-api-server.vercel.app/api/mydata/', { data: postData })
+        // ''
+        axios.post("https://weather-app-api-server.vercel.app/api/mydata/", { data: postData,lat,lon})
             .then(res => {
                 setResponse(res.data);
                 setLoading(false)
                 setApplyCss(true)
-                console.log(typeof (res.data.main.temp))
+                console.log('abhishek',res.data.main)
+                console.log('abhishek2',res.data)
+                
+                setPostData(res.data.name)
+               
                 if (res.data.main.temp !== '273') {
 
                     setTemp(parseInt(res.data.main.temp))
@@ -103,8 +108,47 @@ const MyComponent = () => {
 
 
     }
-    useEffect(
-        imageChanger, [temp, response])
+    useEffect(()=>{
+         imageChanger()
+        if(firstrun===1){
+             if(!navigator.geolocation){
+            return 
+         }
+         setfirstRun(0)
+        let longitude
+        let latitude
+        setLoading(true)
+         navigator.geolocation.getCurrentPosition(
+           (position)=>{
+            
+            ({latitude,longitude} = position.coords)
+            console.log(latitude, longitude)
+            
+            handlePost(latitude,longitude)
+
+            
+
+            
+            
+
+          },
+          (error)=>{
+             
+            toast.warn("please provide the location access. After that refresh it ")
+            return ;
+          
+          }
+          
+        )
+       
+        
+        }
+        
+         
+
+    }
+       
+        , [temp, response])
     return (
         <div className='body' style={{ backgroundImage: 'url(' + background + ')' }}>
             <ToastContainer />
@@ -129,7 +173,7 @@ const MyComponent = () => {
 
                     ></input>
 
-                    <button onClick={handlePost} className='weatherButton'>Check <span className='spinner'><ClipLoader color={"white"} loading={loading} size={25}  /></span></button>
+                    <button onClick={()=>{handlePost(null,null)}} className='weatherButton'>Check <span className='spinner'><ClipLoader color={"white"} loading={loading} size={25}  /></span></button>
                 </div>
 
             </div>
